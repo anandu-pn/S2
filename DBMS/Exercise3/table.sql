@@ -7,11 +7,11 @@ CREATE TABLE COURSE (
     Department VARCHAR(10)
 );
 CREATE TABLE SECTION (
-    Section_identifier VARCHAR(10) PRIMARY KEY,
+    Section_identifier INT PRIMARY KEY,
     Course_number VARCHAR(10),
-    Section_number INT,
     Semester VARCHAR(10),
-    Year INT,
+    Year year,
+    Instructor varchar(20),
     FOREIGN KEY (Course_number) REFERENCES COURSE(Course_number)
 );
 CREATE TABLE PREREQUISITE (
@@ -21,22 +21,20 @@ CREATE TABLE PREREQUISITE (
     FOREIGN KEY (Course_number) REFERENCES COURSE(Course_number),
     FOREIGN KEY (Prerequisite_number) REFERENCES COURSE(Course_number)
 );
--- Step 1: Add an index to the Department column
-CREATE INDEX idx_department ON COURSE(Department);
+/* this is  comment-- Step 1: Add an index to the Department column
+CREATE INDEX idx_department ON COURSE(Department);  */
 CREATE TABLE STUDENT (
-    Student_id VARCHAR(10) PRIMARY KEY,
-    First_name VARCHAR(50),
-    Last_name VARCHAR(50),
-    Date_of_birth DATE,
-    Major VARCHAR(10),
-    FOREIGN KEY (Major) REFERENCES COURSE(Department)
+	Student_number int  PRIMARY KEY,
+    Name VARCHAR(50),
+    Class int ,
+    Major VARCHAR(10)
 );
 CREATE TABLE GRADEREPORT (
-    Report_id VARCHAR(10) PRIMARY KEY,
-    Student_id VARCHAR(10),
-    Section_identifier VARCHAR(10),
+    Report_id int PRIMARY KEY,
+    Student_number int,
+    Section_identifier int,
     Grade CHAR(1),
-    FOREIGN KEY (Student_id) REFERENCES STUDENT(Student_id),
+    FOREIGN KEY (Student_number) REFERENCES STUDENT(Student_number),
     FOREIGN KEY (Section_identifier) REFERENCES SECTION(Section_identifier)
 );
 
