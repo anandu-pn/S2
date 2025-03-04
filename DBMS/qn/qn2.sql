@@ -12,3 +12,10 @@ join course on section.course_number=course.course_number
 join gradereport on  gradereport.Section_identifier=Section_identifier
 join student on gradereport.student_number=student.Student_number
 where course.Course_name='Database' and section.year=08 AND section.semester = 'Fall';
+SELECT student.name, gradereport.grade
+FROM course
+JOIN section ON course.course_number = section.course_number
+JOIN gradereport ON section.section_identifier = gradereport.section_identifier
+JOIN student ON gradereport.student_number = student.student_number
+WHERE course.course_name = 'Database' AND section.year = 2008 AND section.semester = 'Fall';
+
