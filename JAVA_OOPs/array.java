@@ -9,6 +9,7 @@ public class array {
 System.out.println("enter the elemnts");
         for(int i=0;i<a;i++){
             array1[i]=sc.nextInt();
+            
         }
 System.out.println("the array u entered");
         for(int i=0;i<a;i++){
