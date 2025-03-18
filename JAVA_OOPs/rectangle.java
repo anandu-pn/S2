@@ -9,5 +9,6 @@ class rectangle{
         double width=scanner.nextDouble();
         double area = length*width;
         System.out.println("The area is: " +area);
+        scanner.close();
     }
 }
