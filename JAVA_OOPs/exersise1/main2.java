@@ -3,6 +3,12 @@ public class main2 {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         while(true){
+            System.out.println("Select correct operation 1-Addition 2-multiplication 3-Transpose 4-exit");
+            int op=sc.nextInt();
+            if (op==4) {
+                System.out.println("Yor existed from program");
+                break;
+            }
             System.out.print("Enter the size m:");
             int m=sc.nextInt();
             System.out.print("Enter the size m:");
@@ -11,8 +17,6 @@ public class main2 {
             ob1.display();
             matrix ob2=new matrix(m, n);
             ob2.display();
-            System.out.println("Select correct operation 1-Addition 2-multiplication 3-Transpose");
-            int op=sc.nextInt();
             operation op1=new operation(ob1, ob2);
             if(op==1){
                 op1.addition();
@@ -26,7 +30,9 @@ public class main2 {
             else{
                 System.out.println("Please enter a valid option");
             }
-            break;
+            ob1=null;
+            ob2=null;
+            op1=null;
         }
     }
 }
