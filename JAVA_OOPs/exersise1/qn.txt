@@ -1,0 +1,17 @@
+1 define a class with data members product name ,product price,code create 3 objects of product class
+and find the product having lowest price
+
+2 write a menu driven program to perform matrix operation like addition multi, transpose
+
+3 addition of two complex numbers
+
+4 check whether the matrix is symmetric or not
+
+5 create an array and search for particular item in the array
+
+6 perform string manipulation (lowercase to uppercase , find the length, find the subststring, find the index of first occurrence of character in the given string )
+
+7 create a java program with a class for employee having attributes employee number and employee_name and e_slalary find the total salary of the employee(salary+hr+da+ta)
+
+8 create a class for employees having attributes employee number and employee_name and e_slalary read n employee data so that you have to use array of objects and search for an employee using the employee number (use the concept of array of object)
+Ans: syntax for array of objects class name_obj name= new class_name()
