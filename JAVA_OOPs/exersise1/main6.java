@@ -5,9 +5,9 @@ public class main6 {
         System.out.print("Enter the string to do manipulation: ");
         String st=sc.nextLine();
         operation mani=new operation(st);
-        mani.upper();
-        System.out.println("Enter the option for operation to perform");
+        System.out.println("Enter the option for operation to perform \n 1:upper \t 2:length \n3:SubString \t 4:index of substring");
         int op=sc.nextInt();
+        sc.nextLine();
         switch (op) {
             case 1:
                 mani.upper();
@@ -48,7 +48,11 @@ class operation{
         System.out.println("Length of string is "+stop.length());
     }
     void find(String in){
-        System.out.println("string contains " +in+" "+stop.contains(in));
+        if(stop.contains(in))
+        System.out.println("string contains " +in);
+        else{
+            System.out.println("string does not contains " +in);
+        }
     }
     void index(String in){
         int index1=stop.indexOf(in);
