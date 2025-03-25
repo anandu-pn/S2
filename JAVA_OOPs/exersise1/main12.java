@@ -18,7 +18,7 @@ public class main12 {
                 case 1: // Circle
                     System.out.print("Enter radius of the circle: ");
                     double radius = sc.nextDouble();
-                    Circle circle = new Circle(radius);
+                    Shape circle = new Circle(radius);
                     System.out.println("Area of Circle: " + circle.calculateArea());
                     System.out.println("Perimeter of Circle: " + circle.calculatePerimeter());
                     break;
@@ -28,7 +28,7 @@ public class main12 {
                     double length = sc.nextDouble();
                     System.out.print("Enter breadth of the rectangle: ");
                     double breadth = sc.nextDouble();
-                    Rectangle rectangle = new Rectangle(length, breadth);
+                    Shape rectangle = new Rectangle(length, breadth);
                     System.out.println("Area of Rectangle: " + rectangle.calculateArea());
                     System.out.println("Perimeter of Rectangle: " + rectangle.calculatePerimeter());
                     break;
