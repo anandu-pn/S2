@@ -1,2 +1,2 @@
 # S2
-S2 lab related files
+S2 lab related file
